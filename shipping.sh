@@ -1,6 +1,7 @@
 cp shipping.service /etc/systemd/system/shipping.service
 
-mysql -uroot -pRoboShop@1
+yum install maven -y
+
 useradd roboshop
 mkdir /app
 curl -L -o /tmp/shipping.zip https://roboshop-artifacts.s3.amazonaws.com/shipping.zip
