@@ -12,7 +12,7 @@ cd /app
 npm install
 
 yum install mongodb-org-shell -y
-mongo --host mongodb.bdevops74.online </app/schema/user.js
+mongo --host monodb.bdevops74.online </app/schema/user.js
 
 systemctl daemon-reload
 systemctl enable user
