@@ -1,16 +1,17 @@
-echo ">>>>>>>>>create catalogue service<<<<<<<<<<"
+echo -e "\e[36m>>>>>>>>>create catalogue service<<<<<<<<<<\e[0m"
 cp catalogue.service /etc/systemd/system/catalogue.service
-echo ">>>>>>>>>create mongo repo<<<<<<<<<<"
+echo -e "\e[36m>>>>>>>>>create mongo repo<<<<<<<<<<\e[0m"
 cp mongo.repo /etc/yum.repos.d/mongo.repo
-echo ">>>>>>>>>create catalogue service<<<<<<<<<<"
+echo -e "\e[36m>>>>>>>>>create catalogue service<<<<<<<<<<\e[0m"
 curl -sL https://rpm.nodesource.com/setup_lts.x | bash
-echo ">>>>>>>>install nodejs <<<<<<<<<<"
+echo -e "\e[36m>>>>>>>>install nodejs <<<<<<<<<<\e[0m"
+
 yum install nodejs -y
-echo ">>>>>>>>>create app user<<<<<<<<<<"
+echo -e "\e[36m>>>>>>>>>create app user<<<<<<<<<<\e[0m"
 useradd roboshop
-echo ">>>>>>>>>create app dir<<<<<<<<<<"
+echo -e "\e[36m>>>>>>>>>create app dir<<<<<<<<<<\e[0m"
 mkdir /app
-echo ">>>>>>>>>download app content<<<<<<<<<<"
+echo -e "\e[36m>>>>>>>>>download app content<<<<<<<<<<\e[0m"
 curl -o /tmp/catalogue.zip https://roboshop-artifacts.s3.amazonaws.com/catalogue.zip
 echo ">>>>>>>>>extract app content<<<<<<<<<"
 cd /app
